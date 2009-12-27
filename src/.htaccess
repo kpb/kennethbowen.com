@@ -1,0 +1,23 @@
+<Files .htaccess>
+  order allow,deny
+  deny from all
+</Files>
+
+# deny directory browsing
+Options -Indexes
+
+
+Redirect /rss http://sarbastic.kennethbowen.com/rss2
+Redirect /atom http://sarbastic.kennethbowen.com/atom
+
+# rewrite our extentionless pages for clean urls
+
+RewriteEngine on
+
+#remove me for deployment to a proper domain
+#RewriteBase /~kenneth
+
+RewriteRule ^about$ about.html [L]
+
+# for now
+RewriteRule ^resume$ resume.pdf [L]

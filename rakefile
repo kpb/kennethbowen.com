@@ -1,0 +1,37 @@
+require 'fileutils'
+
+task :default => [:init]
+
+# initialize the project
+task :init do
+  
+  @outputdir = "output"
+  FileUtils.mkdir_p 'output' if !File::exists? 'output'
+
+end
+
+# make the website
+task :build => [:init] do
+  
+  cp_r "src/.", @outputdir 
+
+end
+
+# deploy locally
+
+
+# rsnync up with server of choice
+task :deploy do
+  
+  #for now, just copy out of source
+  `rsync -avz -e ssh src/ blackand@blackandwhitemartini.com:public_html/kennethbowen`
+  
+end
+
+
+# remove build output
+task :clean do
+
+  FileUtils.rm_rf 'output' if File::exists? 'output'
+
+end
