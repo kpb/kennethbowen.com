@@ -13,70 +13,13 @@ body
 }
 
 /* Layout and Basic Color */
-#nav-header
-{
-  background-color: #00757f;
-  height: 50px;
-  padding-top: 15px;
-}
 
-#container
-{
-  width: 960px;
-  margin: auto;
-}
-
-#header
-{
-  width: 960px;
-  height: 87px;
-  }
-
-#logo
-{ 
-  width: 231px;
-  height: 87px;
-  float: left;
-}
-#logo p
-{
-  margin: 5px 0;
-  font-size: 4.0em;
-  font-style: italic;
-  line-height: 1.0em;
-}
-
-#blurb
-{ 
-  width: 475px;
-  margin-left: 93px;
-  float: left;
-}
-
-#blurb p
-{ 
-  margin: 5px 0;
-}
-
-#nav
-{ 
-  clear: both;
-  width: 960px;
-  margin-top: 60px;
-}
-
-#main
-{ 
-  clear: both;
-  margin-top: 60px;
-  width: 360px;
-}
 
 #footer
 {
   height: 500px;
   margin-top: 60px;
-  background-color: #e0D1B2;
+  background-color: #E0D1B2;
 }
 
 /* Fonts and Typography */
@@ -122,43 +65,32 @@ ul
 { 
   list-style-type: none;
 }
-
-#blurb p
+#logo
 {
-  font-size: 1.2em;
-  line-height: 1.6em;
+  font-size: 4.0em;
+  font-style: italic;
+  line-height: 1.0em;
+  margin-top: 12px;
 }
 
-#nav
-{ 
-  font-size: 1.4em;
-  font-weight: bold;
+#blurb
+{
+  font-size: 1.2em;
+  line-height: 1.5em;
   font-style: italic;
-  border-bottom: 1px solid #444444;
 }
 
 #nav ul
 { 
+  font-size: 1.2em;
   list-style-image: none;
   list-style-type: none;
 }
 
-#nav ul li
-{ 
-  display: inline;
-  margin-right: 20px;
-}
-
-#logo img
-{ 
-    border-style: none;
-}
-
 /* link style */
-
 a
 {
-  color: #00757F;
+  color: #96331C;
   text-decoration: none;
 }
 
@@ -168,19 +100,29 @@ a:hover
   border-bottom: 1px solid #00757F;
 }
 
-#nav-header a
+#logo a
 { 
-  color: #E0D1B2;
-  font-size: 1.2em;
+  color: #222222;
+  text-decoration: none;
 }
 
-#nav-header a:hover
-{ 
-  border-bottom: 1px solid #E0d1b2;
+#logo a:hover
+{
+  text-decoration: none;
+  border-bottom: none;
 }
 
+#footer a
+{ 
+  color: #00757F;
+}
 
-/* todo fix links */
+#footer a:hover
+{ 
+  color: #00757F;
+  border-bottom: 1px solid #00757F;  
+}
+
 .delicious-posts h2 a:hover
 {
   text-decoration: none;
@@ -188,7 +130,6 @@ a:hover
 }
 
 /* establish a grid */
-
 .row
 {
   width: 960px;
