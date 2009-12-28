@@ -13,8 +13,6 @@ body
 }
 
 /* Layout and Basic Color */
-
-
 #footer
 {
   height: 500px;
@@ -26,29 +24,19 @@ body
 
 /* Defaults */
 h1
-{ 
-  font-size: 1.6em;
-}
+{font-size: 1.6em;}
 
 h2
-{ 
-  font-size: 1.5em;
-}
+{font-size: 1.5em;}
 
 h3
-{ 
-  font-size: 1.4em;
-}
+{font-size: 1.4em;}
 
 h4
-{ 
-  font-size: 1.3em;
-}
+{font-size: 1.3em;}
 
 h5
-{ 
-  font-size: 1.2em;
-}
+{font-size: 1.2em;}
 
 p
 { 
@@ -96,8 +84,8 @@ a
 
 a:hover
 {
-  color: #00757F;
-  border-bottom: 1px solid #00757F;
+  color: #96331C;
+  border-bottom: 1px solid #96331C;
 }
 
 #logo a
