@@ -18,6 +18,7 @@ RewriteEngine on
 #RewriteBase /~kenneth
 
 RewriteRule ^about$ about.html [L]
+RewriteRule ^colophon$ colophon.html [L]
 
 # for now
 RewriteRule ^resume$ resume.pdf [L]
