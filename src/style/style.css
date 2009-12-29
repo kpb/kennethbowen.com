@@ -3,7 +3,7 @@ body
   background-color: #ffffff;
   color: #222222;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 62.5%;
+  font-size: 100%;
 }
 
 *
@@ -15,47 +15,25 @@ body
 /* Layout and Basic Color */
 #footer
 {
-  height: 500px;
   margin-top: 60px;
   background-color: #E0D1B2;
 }
 
 /* Fonts and Typography */
-
-/* Defaults */
-h1
-{font-size: 1.6em;}
-
-h2
-{font-size: 1.5em;}
-
-h3
-{font-size: 1.4em;}
-
-h4
-{font-size: 1.3em;}
-
-h5
-{font-size: 1.2em;}
-
-p
-{ 
-  font-size: 1.2em;
-  line-height: 1.6em;
-}
-
 h1, h2, h3, h4, h5, p
-{ 
+{
   margin: 1em 0;
 }
 
-ul
+p
 { 
-  list-style-type: none;
+  font-size: 15px;
+  line-height: 1.5;
 }
+
 #logo
 {
-  font-size: 4.0em;
+  font-size: 40px;
   font-style: italic;
   line-height: 1.0em;
   margin-top: 12px;
@@ -63,16 +41,31 @@ ul
 
 #blurb
 {
-  font-size: 1.2em;
-  line-height: 1.5em;
+  font-size: 12px;
+  line-height: 1.5;
   font-style: italic;
 }
 
-#nav ul
+#curations ul
 { 
-  font-size: 1.2em;
   list-style-image: none;
   list-style-type: none;
+}
+
+#curations
+{ 
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#footer h2
+{
+  font-style: italic;
+}
+#footer li
+{ 
+  font-size: 12px;
+  line-height: 1.3;
 }
 
 /* link style */
