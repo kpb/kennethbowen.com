@@ -1,0 +1,43 @@
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    color:  #0D0302;
+    background-color: #EFE6D5; /* links...#E73213 */
+}
+
+.starter-template {
+    padding: 10px 15px;
+    text-align: left;
+}
+
+#logo {
+    font-style: italic;
+}
+
+
+#footer {
+    background-color: #9DBEB7;
+}
+
+/* link style */
+a
+{
+  color: #E73213;
+  text-decoration: none;
+}
+
+a:hover
+{
+  color: #E73213;
+}
+
+#logo a { 
+    color: #0D0302;
+    text-decoration: none;
+}
+
+#logo a:hover {
+    text-decoration: underline;
+    color: #E73213;
+}
+
+
