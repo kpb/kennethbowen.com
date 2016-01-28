@@ -1,7 +1,7 @@
 body {
     font-family: Georgia, "Times New Roman", serif;
     color:  #0D0302;
-    background-color: #F6ECE2
+    background-color: #FFFFFF;
 }
 
 .starter-template {
@@ -30,7 +30,7 @@ a:hover
   color: #E73213;
 }
 
-#logo a { 
+#logo a {
     color: #0D0302;
     text-decoration: none;
 }
@@ -39,5 +39,3 @@ a:hover
     text-decoration: underline;
     color: #E73213;
 }
-
-
