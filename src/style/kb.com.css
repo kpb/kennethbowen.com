@@ -15,19 +15,18 @@ body {
 
 
 #footer {
-    background-color: #9DBEB7;
+    color: #E4E3E1;
+    background-color: #2B3534;
 }
 
 /* link style */
-a
-{
-  color: #E73213;
-  text-decoration: none;
+a {
+    color: #E73213;
+    text-decoration: none;
 }
 
-a:hover
-{
-  color: #E73213;
+a:hover {
+    color: #E73213;
 }
 
 #logo a {
@@ -36,8 +35,18 @@ a:hover
 }
 
 #logo a:hover {
+    text-decoration: none;
+    color: #0D0302;
+}
+
+#footer a {
+    color: #E4E3E1;
+    text-decoration: none;
+}
+
+#footer a:hover {
     text-decoration: underline;
-    color: #E73213;
+    color: #C0BDB9;
 }
 
 /* Featurettes */
