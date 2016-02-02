@@ -1,7 +1,13 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
     font-family: Georgia, "Times New Roman", serif;
     color:  #0D0302;
     background-color: #FFFFFF;
+    margin-bottom: 275px;
 }
 
 .starter-template {
@@ -14,7 +20,7 @@ body {
 }
 
 
-#footer {
+.footer {
     color: #E4E3E1;
     background-color: #2B3534;
 }
@@ -39,12 +45,12 @@ a:hover {
     color: #0D0302;
 }
 
-#footer a {
+.footer a {
     color: #E4E3E1;
     text-decoration: none;
 }
 
-#footer a:hover {
+.footer a:hover {
     text-decoration: underline;
     color: #C0BDB9;
 }
@@ -53,4 +59,12 @@ a:hover {
 
 .featurette-divider {
   margin: 40px 0; /* Space out the Bootstrap <hr> more */
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 275px;
 }
