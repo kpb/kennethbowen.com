@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville);
+
 /* Sticky Footer */
 html, body {
     height: 100%;
@@ -35,7 +37,7 @@ body {
 /* typography */
 
 body {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: 'Libre Baskerville', serif;
 }
 
 #logo {
