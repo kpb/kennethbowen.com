@@ -24,6 +24,7 @@ body {
     color: #E4E3E1;
     background-color: #2B3534;
     width: 100%;
+    padding-left: 35px;
 }
 
 /* link style */
@@ -59,7 +60,7 @@ a:hover {
 /* Featurettes */
 
 .featurette-divider {
-  margin: 40px 0; /* Space out the Bootstrap <hr> more */
+  margin: 60px 0; /* Space out the Bootstrap <hr> */
 }
 
 .footer {
