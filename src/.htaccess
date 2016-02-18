@@ -7,9 +7,6 @@
 Options -Indexes
 
 
-Redirect /rss http://sarbastic.kennethbowen.com/rss2
-Redirect /atom http://sarbastic.kennethbowen.com/atom
-
 # rewrite our extentionless pages for clean urls
 
 RewriteEngine on
@@ -21,4 +18,4 @@ RewriteRule ^about$ about.html [L]
 RewriteRule ^colophon$ colophon.html [L]
 
 # for now
-RewriteRule ^resume$ resume.pdf [L]
+# RewriteRule ^resume$ resume.pdf [L]
