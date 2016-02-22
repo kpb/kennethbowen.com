@@ -2,9 +2,6 @@
 
 /* general styles & color */
 
-body {
-    padding-bottom: 0px;
-}
 .main-content {
      padding: 10px 30px;
 }
@@ -44,3 +41,8 @@ a:hover {
     border: none;
 }
 
+@media print {
+  a[href]:after {
+    content: none;
+  }
+}
