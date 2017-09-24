@@ -21,6 +21,10 @@ init:
 clean:
 	rm -rf $(OUTPUTDIR)
 
+#
+# Build Targets
+#
+
 # Build the 'resume' module
 # - copy all files from resume/src into the output dir
 .PHONY: resume
@@ -32,6 +36,10 @@ resume: init
 # Build everything
 .PHONY: all
 all: resume
+
+#
+# Deploy Targets
+#
 
 # Deploy the resume module
 .PHONY: deploy-resume
