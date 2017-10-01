@@ -54,3 +54,8 @@ deploy-resume: resume
 # Deploy for great justice
 .PHONY: deploy
 deploy: deploy-resume
+
+# Try it in a webserver
+.PHONY: try
+try: all
+	ruby -run -ehttpd ./output -p8000
