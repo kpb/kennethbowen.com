@@ -25,6 +25,11 @@ clean:
 # Build Targets
 #
 
+# Build the static pages for kennethbowen.com
+.PHONY: static
+static: init
+	cp -r src/* $(OUTPUTDIR)/
+
 # Build the 'resume' module
 # - copy all files from resume/src into the output dir
 .PHONY: resume
@@ -35,7 +40,7 @@ resume: init
 
 # Build everything
 .PHONY: all
-all: resume
+all: static resume
 
 #
 # Deploy Targets
