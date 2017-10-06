@@ -6,7 +6,7 @@
 OUTPUTDIR = output
 
 # deploy vars
-DEPLOY_USER = blackand
+DEPLOY_USER = kenbow8
 DEPLOY_HOST = blackandwhitemartini.com
 
 # Init the project:
@@ -28,7 +28,7 @@ clean:
 # Build the static pages for kennethbowen.com
 .PHONY: static
 static: init
-	cp -r src/* $(OUTPUTDIR)/
+	cp -r src/* src/.??* $(OUTPUTDIR)/
 
 # Build the 'resume' module
 # - copy all files from resume/src into the output dir
@@ -51,9 +51,10 @@ all: static resume
 deploy-resume: resume
 	rsync -avz -e ssh $(resumedir) $(DEPLOY_USER)@$(DEPLOY_HOST):public_html/kennethbowen
 
-# Deploy for great justice
+# Deploy all of it, for great justice
 .PHONY: deploy
-deploy: deploy-resume
+deploy: clean all
+	rsync -avz -e ssh $(OUTPUTDIR)/ $(DEPLOY_USER)@$(DEPLOY_HOST):kennethbowen.com
 
 # Try it in a webserver
 .PHONY: try

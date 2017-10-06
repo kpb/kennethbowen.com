@@ -1,21 +1,4 @@
-<Files .htaccess>
-  order allow,deny
-  deny from all
-</Files>
-
-# deny directory browsing
-Options -Indexes
-
-
-# rewrite our extentionless pages for clean urls
-
-RewriteEngine on
-
-#remove me for deployment to a proper domain
-#RewriteBase /~kenneth
-
-RewriteRule ^about$ about.html [L]
-RewriteRule ^colophon$ colophon.html [L]
-
-# for now
-# RewriteRule ^resume$ resume.pdf [L]
+# rewrite http --> https
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
