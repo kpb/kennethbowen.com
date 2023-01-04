@@ -49,7 +49,7 @@ all: static resume
 # Deploy the resume module
 .PHONY: deploy-resume
 deploy-resume: resume
-	rsync -avz -e ssh $(resumedir) $(DEPLOY_USER)@$(DEPLOY_HOST):public_html/kennethbowen
+	rsync -avz -e ssh $(resumedir) $(DEPLOY_USER)@$(DEPLOY_HOST):kennethbowen.com
 
 # Deploy all of it, for great justice
 .PHONY: deploy
