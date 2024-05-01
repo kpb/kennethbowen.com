@@ -1,62 +1,60 @@
 #!/usr/bin/make
 #
 # Build and deploy kennethbowen.com
+#
+# Use: to deploy, set the DEPLOY_USER and the DEPLOY_HOST vars.
+
+.DEFAULT_GOAL := help
 
 # build vars
-OUTPUTDIR = output
+OUTPUTDIR = site
 
-# deploy vars
-DEPLOY_USER = kenbow8
-DEPLOY_HOST = blackandwhitemartini.com
-
-# Init the project:
-# - create the 'output' dir
 .PHONY: init
-init:
-	mkdir -p $(OUTPUTDIR)
+init: ## Init the project
+	@mkdir -p $(OUTPUTDIR)
 
-# Clean the project:
-# - delete the 'output' dir
 .PHONY: clean
-clean:
-	rm -rf $(OUTPUTDIR)
+clean: ## delete the build directory
+	@rm -rf $(OUTPUTDIR)
 
 #
 # Build Targets
 #
 
-# Build the static pages for kennethbowen.com
 .PHONY: static
-static: init
-	cp -r src/* src/.??* $(OUTPUTDIR)/
+static: init ## Build the static pages for kennethbowen.com
+	@cp -r src/* src/.??* $(OUTPUTDIR)/
 
-# Build the 'resume' module
-# - copy all files from resume/src into the output dir
 .PHONY: resume
 resumedir = $(OUTPUTDIR)/resume
-resume: init
-	mkdir -p $(resumedir)
-	cp -r resume/src/* $(resumedir)
+resume: init ## Build the resume module
+	@mkdir -p $(resumedir)
+	@cp -r resume/src/* $(resumedir)
 
-# Build everything
 .PHONY: all
-all: static resume
+all: static resume ## Build Everything
 
 #
 # Deploy Targets
 #
 
-# Deploy the resume module
+.PHONY: check-deploy-vars
+check-deploy-vars: ## Ensure deploy vars have been set
+	@[ "${DEPLOY_USER}" ] || ( echo ">> DEPLOY_USER is not set"; exit 1 )
+	@[ "${DEPLOY_HOST}" ] || ( echo ">> DEPLOY_HOST is not set"; exit 1 )
+
 .PHONY: deploy-resume
-deploy-resume: resume
+deploy-resume: check-deploy-vars resume ## Build and deploy the resume module
 	rsync -avz -e ssh $(resumedir) $(DEPLOY_USER)@$(DEPLOY_HOST):kennethbowen.com
 
-# Deploy all of it, for great justice
 .PHONY: deploy
-deploy: clean all
+deploy: check-deploy-vars clean all ## Build and deploy all of kennethbowen.com
 	rsync -avz -e ssh $(OUTPUTDIR)/ $(DEPLOY_USER)@$(DEPLOY_HOST):kennethbowen.com
 
-# Try it in a webserver
 .PHONY: try
-try: all
-	ruby -run -ehttpd ./output -p8000
+try: all ## Run the site in a Ruby webserver
+	ruby -run -ehttpd ./site -p8000
+
+.PHONY: help
+help:
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-19s\033[0m %s\n", $$1, $$2}'
