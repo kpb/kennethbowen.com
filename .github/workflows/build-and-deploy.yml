@@ -8,8 +8,21 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    env:
+      DEPLOY_USER: "${{ secrets.DEPLOY_USER }}"
+      DEPLOY_HOST: "${{ secrets.DEPLOY_HOST }}"
+      DEPLOY_KEY: "${{ secrets.SSH_DEPLOY_KEY }}"
     steps:
     - uses: actions/checkout@v4
+    - name: ssh-keys
+      run: |
+        echo "$DEPLOY_KEY"
+        install -m 600 -D /dev/null ~/.ssh/id_ed25519
+        echo "$DEPLOY_KEY" > ~/.ssh/id_ed25519
+        ssh-keyscan -H "$DEPLOY_HOST" > ~/.ssh/known_hosts
     - name: build
       run: |
         make clean all
+    - name: deploy
+      run: |
+        make deploy
