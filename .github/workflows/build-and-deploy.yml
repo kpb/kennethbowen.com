@@ -1,0 +1,15 @@
+name: build-and-deploy
+run-name: ${{ github.actor }} build and deploy kennethbowen.com
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: build
+      run: |
+        make clean all
