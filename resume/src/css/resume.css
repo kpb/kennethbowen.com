@@ -18,6 +18,10 @@ body {
     font-family: 'Roboto', san-serif;
 }
 
+footer {
+  font-family: 'Libre Baskerville', serif;
+}
+
 /* links */
 
 .footer-content a {
