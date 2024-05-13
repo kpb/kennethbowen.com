@@ -1,77 +1,78 @@
-@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville);
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 /* Sticky Footer */
 html, body {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    display: table;
-    width: 100%;
+  display: table;
+  width: 100%;
 }
 
 .page-row {
-    display: table-row;
-    height: 1px;
+  display: table-row;
+  height: 1px;
 }
 
 .page-row-expanded {
-    height: 100%;
+  height: 100%;
 }
 
 /* general styles & color */
 .main-content {
-     padding: 10px 30px;
+  padding: 10px 30px;
 }
 
 .footer-content {
-    color: #E4E3E1;
-    background-color: #2B3534;
+  color: #E4E3E1;
+  background-color: #2B3534;
 }
 
 /* typography */
 
 body {
-    font-family: 'Libre Baskerville', serif;
+  font-family: 'Libre Baskerville', serif;
 }
 
 #logo {
-    font-style: italic;
+  font-style: italic;
 }
 
 /* links */
 
 a, a:link, a:visited {
-               border-bottom: 1px solid #ccc;
-           }
+  border-bottom: 1px solid #ccc;
+}
 
 a:hover {
-    text-decoration: none;
-    border-bottom: 1px solid #0074d9;
-    color: #C0BDB9;
+  text-decoration: none;
+  border-bottom: 1px solid #0074d9;
+  color: #C0BDB9;
 }
 
 #logo a {
-    color: #0D0302;
-    text-decoration: none;
-    border: none;
+  color: #0D0302;
+  text-decoration: none;
+  border: none;
 }
 
 #logo a:hover {
-    text-decoration: none;
-    color: #C0BDB9;
+  text-decoration: none;
+  color: #C0BDB9;
 }
 
 .footer-content a {
-    color: #E4E3E1;
-    text-decoration: none;
-    border:none;
+  color: #E4E3E1;
+  text-decoration: none;
+  border:none;
 }
 
 .footer-content a:hover {
-    text-decoration: none;
-    color: #C0BDB9;
-    border: none;
+  text-decoration: none;
+  color: #C0BDB9;
+  border: none;
 }
 
 /* Featurettes */
