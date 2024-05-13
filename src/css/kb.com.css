@@ -41,15 +41,13 @@ body {
 }
 
 /* links */
-
 a, a:link, a:visited {
-  border-bottom: 1px solid #ccc;
+  text-decoration: none;
+  color: #0098d8;
 }
 
 a:hover {
-  text-decoration: none;
-  border-bottom: 1px solid #0074d9;
-  color: #C0BDB9;
+  border-bottom: 1px solid #0098d8;
 }
 
 #logo a {
