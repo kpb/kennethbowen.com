@@ -1,6 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Libre+Baskerville");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+/*
+   Colors from https://fabianburghardt.de/swisscolors/
+   background: #e5e7de
+   font: #0b3536
+   link: #0098d8
+   highlight: #f54123
+ */
+
 /* Sticky Footer */
 html, body {
   height: 100%;
@@ -26,18 +36,21 @@ body {
 }
 
 .footer-content {
-  color: #E4E3E1;
-  background-color: #2B3534;
+  color: #e5e7de;
+  background-color: #0b3536;
+}
+
+footer h2 {
+  color: #f54123;
 }
 
 /* typography */
 
 body {
-  font-family: 'Libre Baskerville', serif;
-}
-
-#logo {
-  font-style: italic;
+  font-family: Questrial;
+  font-size: 1.25rem;
+  color: #0b3536;
+  background-color: #e5e7de;
 }
 
 /* links */
@@ -51,29 +64,29 @@ a:hover {
 }
 
 #logo a {
-  color: #0D0302;
+  color: #f54123;
   text-decoration: none;
   border: none;
 }
 
 #logo a:hover {
-  text-decoration: none;
-  color: #C0BDB9;
+  border-bottom: 1px solid #0098d8;
+  color: #0098d8;
 }
 
 .footer-content a {
-  color: #E4E3E1;
+  color: #e5e7de;
   text-decoration: none;
   border:none;
 }
 
 .footer-content a:hover {
   text-decoration: none;
-  color: #C0BDB9;
+  color: #0098d8;
   border: none;
 }
 
 /* Featurettes */
 .featurette-divider {
-  margin: 60px 0; /* Space out the Bootstrap <hr> */
+  margin: 50px 0; /* Space out the Bootstrap <hr> */
 }
