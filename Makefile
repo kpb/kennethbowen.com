@@ -52,12 +52,12 @@ deploy: check-deploy-vars clean all ## Build and deploy all of kennethbowen.com
 	rsync -avz -e ssh $(OUTPUTDIR)/ $(DEPLOY_USER)@$(DEPLOY_HOST):kennethbowen.com
 
 .PHONY: try
-try-ruby: all ## Run the site in a Ruby webserver
-	ruby -run -ehttpd ./site -p8000
+try: all ## Run the site in a Python 3 webserver
+	python3 -m http.server --directory ./site 8000
 
 .PHONY: try
-try-py: all ## Run the site in a Python 3 webserver
-	python3 -m http.server --directory ./site 8000
+try-ruby: all ## Run the site in a Ruby webserver
+	ruby -run -ehttpd ./site -p8000
 
 .PHONY: help
 help:
