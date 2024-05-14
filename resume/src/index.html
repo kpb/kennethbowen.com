@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The above meta tags *must* come first in the head; any other head content must come *after* these
+         tags -->
+
+    <meta name="description" content="Kenneth Bowen website"/>
+    <meta name="author" content="Kenneth Bowen"/>
     <link rel="icon" href="/assets/kpb.ico" />
 
     <title>Kenneth Bowen - Resume Summary</title>
@@ -14,15 +16,21 @@
           rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
           crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="/assets/css/kb.com.css" rel="stylesheet"/>
     <link href="/resume/css/resume.css" rel="stylesheet">
   </head>
 
   <body>
+    <header class="page-row">
+      <!-- Style the inner div! -->
+      <div class="container-fluid main-content">
+        <h1 id="logo"><a href="/">Kenneth Bowen</a></h1>
+        <hr class="featurette-divider" />
+      </div>
+    </header>
 
-    <div class="px-4 py-5 my-5 text-start">
-      <div class="col-lg-6 mx-auto text-start">
-        <h1>Kenneth Bowen</h1>
+    <div class="page-row page-row-expanded">
+      <div class="container main-content resume-content">
         <p class="lead mb-4">
           Accomplished software architect, developer, and team leader. Experienced in microservice architecture and
           development, large data strategies, Cloud Native/12 factor design, web development, application integration, and
@@ -39,39 +47,40 @@
       </div>
     </div>
 
-    <footer>
+    <footer class="page-row">
       <div class="container-fluid footer-content main-content">
-
         <div class="row">
-
           <div class="col-md-4">
             <h2><em>Info</em></h2>
             <ul class="list-unstyled">
-              <li><a href="http://kennethbowen.com">Home</a></li>
+              <li><a href="/">Home</a></li>
               <li><a href="mailto:kenneth('at'%20symbol)kennethbowen.com">Email</a></li>
-              <li><a href="../about">About</a></li>
-              <li><a href="../resume">Resume</a></li>
-              <li><a href="../colophon">Colophon</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/resume">Resume</a></li>
+              <li><a href="/colophon">Colophon</a></li>
             </ul>
           </div>
 
           <div class="col-md-4">
             <h2><em>Words</em></h2>
             <ul class="list-unstyled">
-              <li><a href="http://kennethbowen.com/blog">Personal Blog</a></li>
+              <li><a href="/blog">Personal Blog</a></li>
               <li><a href="http://cultureofcode.com">Culture of Code</a>:&nbsp;A more technical blog</li>
             </ul>
           </div>
 
           <div class="col-md-4">
             <ul class="list-unstyled">
-              <li><a href="http://www.linkedin.com/in/kennethbowen" title="linkedIn"><i class="bi bi-linkedin"></i></a></li>
-              <li><a href="http://twitter.com/kennethpbowen" title="Twitter"><i class="bi bi-twitter"></i></a></li>
-              <li><a href="https://github.com/kpb" title="GitHub"><i class="bi bi-github"></i></a></li>
+              <li><a href="https://github.com/kpb" title="GitHub"><i class="bi bi-github fs-4"></i></a></li>
+              <li><a href="http://www.linkedin.com/in/kennethbowen" title="linkedIn"><i class="bi bi-linkedin fs-4"></i></a></li>
+              <li><a href="http://twitter.com/kennethpbowen" title="Twitter"><i class="bi bi-twitter-x fs-4"></i></a></li>
+              <li><a href="http://www.facebook.com/kenneth.bowen" title="Facebook"><i class="bi bi-facebook fs-4"></i></a></li>
+              <li><a href="https://www.instagram.com/kennethpbowen/"><i class="bi bi-instagram fs-4"></i></a></li>
             </ul>
           </div>
 
         </div> <!-- end row -->
+
 
         <div class="row">
           <div class="col-md-12">
@@ -84,11 +93,5 @@
 
       </div> <!-- end container -->
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous">
-    </script>
-
   </body>
 </html>
