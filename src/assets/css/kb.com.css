@@ -90,3 +90,8 @@ a:hover {
 .featurette-divider {
   margin: 50px 0; /* Space out the Bootstrap <hr> */
 }
+
+/* work with bootstrap's img-fluid to make a smaller image */
+.stf-40 {
+  max-width: 40%;
+}
