@@ -95,3 +95,9 @@ a:hover {
 .stf-40 {
   max-width: 40%;
 }
+
+.btn-outline-primary {
+  --bs-btn-border-color: #0098d8;
+  --bs-btn-hover-color: #e5e7de;
+  --bs-btn-hover-bg: #f54123;
+}
