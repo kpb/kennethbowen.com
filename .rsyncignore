@@ -1,0 +1,3 @@
+# List of files to ignore when deploying via rsync
+# Let's Encrypt created dir - leave it!
+.well-known

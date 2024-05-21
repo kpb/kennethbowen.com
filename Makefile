@@ -45,11 +45,11 @@ check-deploy-vars: ## Ensure deploy vars have been set
 
 .PHONY: deploy-resume
 deploy-resume: check-deploy-vars resume ## Build and deploy the resume module
-	rsync -avz -e ssh $(resumedir) $(DEPLOY_USER)@$(DEPLOY_HOST):kennethbowen.com
+	rsync -avz --exclude-from .rsyncignore -e ssh --delete $(resumedir) $(DEPLOY_USER)@$(DEPLOY_HOST):kennethbowen.com
 
 .PHONY: deploy
 deploy: check-deploy-vars clean all ## Build and deploy all of kennethbowen.com
-	rsync -avz -e ssh $(OUTPUTDIR)/ $(DEPLOY_USER)@$(DEPLOY_HOST):kennethbowen.com
+	rsync -avz --exclude-from .rsyncignore -e ssh --delete $(OUTPUTDIR)/ $(DEPLOY_USER)@$(DEPLOY_HOST):kennethbowen.com
 
 .PHONY: try
 try: all ## Run the site in a Python 3 webserver
