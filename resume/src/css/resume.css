@@ -12,6 +12,9 @@ body {
 
 /* printing/pdf-ing */
 @media print {
+  body {
+    font-size: .80rem;
+  }
   a[href]:after {
     content: none;
   }
