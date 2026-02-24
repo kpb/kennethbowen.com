@@ -21,18 +21,12 @@ clean: ## delete the build directory
 # Build Targets
 #
 
-.PHONY: static
-static: init ## Build the static pages for kennethbowen.com
-	@cp -r src/* src/.??* $(OUTPUTDIR)/
-
-.PHONY: resume
-resumedir = $(OUTPUTDIR)/resume
-resume: init ## Build the resume module
-	@mkdir -p $(resumedir)
-	@cp -r resume/src/* $(resumedir)
+.PHONY: build
+build: init ## Build the site with Hugo
+	@hugo --destination $(OUTPUTDIR)
 
 .PHONY: all
-all: static resume ## Build Everything
+all: build ## Build Everything
 
 #
 # Deploy Targets
@@ -43,21 +37,13 @@ check-deploy-vars: ## Ensure deploy vars have been set
 	@[ "${DEPLOY_USER}" ] || ( echo ">> DEPLOY_USER is not set"; exit 1 )
 	@[ "${DEPLOY_HOST}" ] || ( echo ">> DEPLOY_HOST is not set"; exit 1 )
 
-.PHONY: deploy-resume
-deploy-resume: check-deploy-vars resume ## Build and deploy the resume module
-	rsync -avz --exclude-from .rsyncignore -e ssh --delete $(resumedir) $(DEPLOY_USER)@$(DEPLOY_HOST):kennethbowen.com
-
 .PHONY: deploy
 deploy: check-deploy-vars clean all ## Build and deploy all of kennethbowen.com
 	rsync -avz --exclude-from .rsyncignore -e ssh --delete $(OUTPUTDIR)/ $(DEPLOY_USER)@$(DEPLOY_HOST):kennethbowen.com
 
 .PHONY: try
-try: all ## Run the site in a Python 3 webserver
-	python3 -m http.server --directory ./site 8000
-
-.PHONY: try
-try-ruby: all ## Run the site in a Ruby webserver
-	ruby -run -ehttpd ./site -p8000
+try: all ## Run the site in a Hugo webserver
+	hugo server --destination $(OUTPUTDIR) --disableFastRender
 
 .PHONY: help
 help:

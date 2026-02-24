@@ -1,0 +1,11 @@
+baseURL = "https://kennethbowen.com/"
+languageCode = "en-us"
+title = "Kenneth Bowen"
+theme = "kb.com"
+publishDir = "site"
+disableKinds = ["taxonomy", "term", "RSS"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
