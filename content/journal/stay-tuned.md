@@ -4,7 +4,7 @@ date = 2026-02-20T09:00:00-07:00
 tags = ["updates", "personal"]
 +++
 
-Setting up this blog and will start publishing here soon.
+Setting up this journal and will start publishing here soon.
 
 <!--more-->
 
