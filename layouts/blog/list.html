@@ -1,0 +1,20 @@
+{{ define "main" }}
+    <div class="page-row page-row-expanded">
+      <div class="container-fluid main-content">
+        {{ .Content }}
+
+        {{ $posts := first 10 (sort (where .Site.RegularPages "Section" "blog") "Date" "desc") }}
+        {{ if eq (len $posts) 0 }}
+        <p class="lead">No posts yet.</p>
+        {{ else }}
+        {{ range $posts }}
+        <article>
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          {{ .Summary }}
+          <hr class="featurette-divider" />
+        </article>
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+{{ end }}

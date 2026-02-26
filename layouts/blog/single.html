@@ -1,0 +1,31 @@
+{{ define "main" }}
+    <div class="page-row page-row-expanded">
+      <div class="container-fluid main-content">
+        <article>
+          <h2>{{ .Title }}</h2>
+          <p><small>{{ .Date.Format "2 January 2006" }}</small></p>
+          <p>
+            by
+            {{ $author := or .Params.author .Site.Params.author }}
+            {{ $authorEmail := or .Params.author_email .Site.Params.author_email }}
+            {{ $authorFirst := $author }}
+            {{ if $author }}
+              {{ $authorFirst = index (split $author " ") 0 }}
+            {{ end }}
+            {{ if and $authorFirst $authorEmail }}
+            <a href="mailto:{{ $authorEmail }}">{{ $authorFirst }}</a>
+            {{ else if $author }}
+            {{ $authorFirst }}
+            {{ end }}
+            {{ with .GetTerms "tags" }}
+            in
+            {{ range $index, $tag := . }}
+              {{ if gt $index 0 }}, {{ end }}<a href="{{ $tag.RelPermalink }}">{{ lower $tag.LinkTitle }}</a>
+            {{ end }}
+            {{ end }}
+          </p>
+          {{ .Content }}
+        </article>
+      </div>
+    </div>
+{{ end }}

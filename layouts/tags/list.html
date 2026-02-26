@@ -1,0 +1,20 @@
+{{ define "main" }}
+    <div class="page-row page-row-expanded">
+      <div class="container-fluid main-content">
+        <h2>Tag: {{ lower .Title }}</h2>
+        {{ $posts := sort .Pages "Date" "desc" }}
+        {{ if eq (len $posts) 0 }}
+        <p class="lead">No posts yet.</p>
+        {{ else }}
+        {{ range $posts }}
+        <article>
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p><small>{{ .Date.Format "2 January 2006" }}</small></p>
+          {{ .Summary }}
+          <hr class="featurette-divider" />
+        </article>
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+{{ end }}
